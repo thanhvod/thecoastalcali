@@ -5,7 +5,7 @@
 body {
   max-width: 1024px;
   margin: 0 auto;
-  background-color: #e5e5e5;
+  background-color: #1c3e60;
 }
 .container {
   display: flex;
@@ -16,7 +16,7 @@ body {
 .image-block {
   width: 100%;
   height: auto;
-  padding-top: 50px;
+  padding: 50px 50px 0 50px;
 }
 .image-block img {
   border-radius: 16px;
