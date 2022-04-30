@@ -1,0 +1,56 @@
+/* GENERAL */
+a {
+  color: #222;
+}
+
+button.Mui-disabled {
+  box-shadow: none !important;
+}
+
+.MuiButton-containedPrimary.MuiButton-containedPrimary {
+  background: var(--colorPrimary);
+  box-shadow: var(--shadowPrimary);
+}
+
+.MuiButton-containedPrimary.MuiButton-containedPrimary:hover {
+  background: var(--colorPrimaryDarker);
+  box-shadow: var(--shadowSecondary);
+}
+
+.MuiButton-containedSecondary.MuiButton-containedSecondary {
+  background: var(--colorSecondary);
+}
+
+.MuiPaper-elevation1.MuiPaper-elevation1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
+}
+
+.MuiInput-underline.MuiInput-underline:after {
+  border-bottom-color: var(--colorPrimary);
+}
+
+.MuiFormLabel-root.Mui-focused.MuiFormLabel-root.Mui-focused {
+  color: var(--colorPrimary);
+}
+
+.MuiSlider-root.MuiSlider-root {
+  color: var(--colorPrimary);
+}
+
+/* HEADER */
+.MuiAppBar-colorPrimary.MuiAppBar-colorPrimary {
+  background: var(--colorSecondary);
+  box-shadow: var(--shadowCyan);
+}
+
+/* ALERT */
+.MuiPaper-root.MuiAlert-root {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 960px) {
+  #main-app {
+    padding: 12px;
+  }
+}

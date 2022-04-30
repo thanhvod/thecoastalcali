@@ -1,24 +1,15 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  max-width: 1024px;
-  margin: 0 auto;
-  background-color: #1c3e60;
-}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
 }
-.image-block {
+.imageBlock {
   width: 100%;
   height: auto;
   padding: 50px 50px 0 50px;
 }
-.image-block img {
+.imageBlock img {
   border-radius: 16px;
   width: 100%;
   object-fit: contain;
@@ -28,10 +19,10 @@ body {
   .container {
     padding-bottom: 24px;
   }
-  .image-block {
+  .imageBlock {
     padding: 24px 24px 0px 24px;
   }
-  .image-block img {
+  .imageBlock img {
     border-radius: 8px;
   }
 }
@@ -40,10 +31,10 @@ body {
   .container {
     padding-bottom: 12px;
   }
-  .image-block {
+  .imageBlock {
     padding: 12px 12px 0px 12px;
   }
-  .image-block img {
+  .imageBlock img {
     border-radius: 4px;
   }
 }
