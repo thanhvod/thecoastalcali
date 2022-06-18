@@ -1,0 +1,89 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.navbarlogo {
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  color: rgba(28, 62, 96, 1);
+  font-family: 'Times';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  width: 50vw;
+  white-space: nowrap;
+}
+
+.navMenu {
+  display: flex;
+  column-gap: 20px;
+  list-style: none;
+  text-align: center;
+  width: 75vw;
+  justify-content: end;
+  margin-right: 1em;
+  .active {
+    color: rgba(159, 122, 63, 1);
+  }
+}
+
+.navLinks:hover {
+  color: rgba(159, 122, 63, 1);
+}
+.menuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    position: fixed;
+  }
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .navMenu.active {
+    background: #ccc;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5 ease;
+    z-index: 1;
+  }
+  .navLinks {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+  .navbarlogo {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 100%);
+  }
+  .menuIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 90%);
+    cursor: pointer;
+  }
+}

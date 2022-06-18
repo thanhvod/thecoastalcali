@@ -2,6 +2,9 @@
 a {
   color: #222;
 }
+body {
+  background-color: var(--colorPrimary);
+}
 
 button.Mui-disabled {
   box-shadow: none !important;
