@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+
 import * as ROUTINGS from '../../routing/path';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -8,20 +9,15 @@ import styles from './style.module.scss';
 import { useState } from 'react';
 
 const menuItem = [
-  { id: 0, title: 'Đặt tiệc', url: ROUTINGS.ROUTING_ORDER, cName: 'navLinks' },
-  { id: 1, title: 'Menu', url: ROUTINGS.ROUTING_MENU, cName: 'navLinks' },
-  { id: 2, title: 'Hình ảnh', url: ROUTINGS.ROUTING_IMAGE, cName: 'navLinks' },
+  { id: 1, title: 'Đặt tiệc', url: ROUTINGS.ROUTING_ORDER },
+  { id: 2, title: 'Menu', url: ROUTINGS.ROUTING_MENU },
+  { id: 3, title: 'Hình ảnh', url: ROUTINGS.ROUTING_IMAGE },
 ];
 
 export default () => {
-  const [clicked, setClicked] = useState(false);
-  const [active, setActive] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
   const handleClick = () => {
-    setClicked(!clicked);
-  };
-  const handleClickMenuItem = (item) => {
-    setActive(item.id);
-    setClicked(!clicked);
+    setShowMenu(!showMenu);
   };
   return (
     <>
@@ -30,16 +26,17 @@ export default () => {
           <span>THE COASTAL CALI</span>
         </div>
         <div className={styles.menuIcon} onClick={handleClick}>
-          {clicked ? <CloseIcon /> : <MenuIcon />}
+          {showMenu ? <CloseIcon /> : <MenuIcon />}
         </div>
-        <ul className={classnames(styles.navMenu, clicked && styles.active)}>
+        <ul className={classnames(styles.navMenu, showMenu && styles.active)}>
           {menuItem.map((item, index) => {
             return (
               <li key={index}>
                 <NavLink
                   to={item.url}
-                  className={classnames(styles.navLinks, active == item.id && styles.active)}
-                  onClick={() => handleClickMenuItem(item)}
+                  className={styles.navLinks}
+                  activeClassName={styles.active}
+                  onClick={() => setShowMenu(false)}
                 >
                   {item.title}
                 </NavLink>

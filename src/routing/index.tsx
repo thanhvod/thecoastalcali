@@ -4,10 +4,10 @@ import { Suspense, lazy } from 'react';
 import * as ROUTINGS from './path';
 
 const LazyLoading = () => <div></div>;
+const Order = lazy(() => import('../container/order'));
 
 const Image = lazy(() => import('../container/image'));
 const Menu = lazy(() => import('../container/menu'));
-const Order = lazy(() => import('../container/order'));
 
 export default () => (
   <Suspense fallback={<LazyLoading />}>
